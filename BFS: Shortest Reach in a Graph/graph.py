@@ -21,7 +21,8 @@ class Graph:
 
             if self.distances[node] == -1:  # first visit to the node
                 self.distances[node] = distance
-                [dq.append((n, distance + 6)) for n in self.adjacent_list.get(node, [])]  # loop over node edges and add to the queu
+                # loop over node edges and add it to the queue
+                [dq.append((n, distance + 6)) for n in self.adjacent_list.get(node, [])]
 
         del self.distances[root_node]
         print(*self.distances, sep=' ')
