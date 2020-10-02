@@ -2,7 +2,7 @@ import sys
 
 from graph import Graph
 
-sys.stdin = open('sample_input.txt')
+sys.stdin = open('difficult_input_text.txt')
 
 t = int(input())
 
