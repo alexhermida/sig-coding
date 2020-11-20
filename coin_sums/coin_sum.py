@@ -17,9 +17,11 @@ result = 200
 #     print(value)
 #     comb.append(value)
 
-# for selected_coins in range(0, len(coins)):
-#     print('selected_coin', coins[selected_coins])
-#     print('selected_coins', coins[:selected_coins])
+for selected_coins in range(0, len(coins)):
+    s_coin = coins[selected_coins]
+    print('selected_coin', coin)
+
+    # print('selected_coins', coins[:selected_coins])
 
 
 # print('Total combinations', len(comb))
@@ -35,12 +37,12 @@ result = 200
 
 # print('_get_change_making_matrix', _get_change_making_matrix(coins, result))
 
-def changes(amount, coins):
-    ways = [0] * (amount + 1)
-    ways[0] = 1
-    for coin in coins:
-        for j in range(coin, amount + 1):
-            ways[j] += ways[j - coin]
-    return ways[amount]
+# def changes(amount, coins):
+#     ways = [0] * (amount + 1)
+#     ways[0] = 1
+#     for coin in coins:
+#         for j in range(coin, amount + 1):
+#             ways[j] += ways[j - coin]
+#     return ways[amount]
 
-print(changes(result, coins))
+# print(changes(result, coins))
