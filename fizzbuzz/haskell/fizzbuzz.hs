@@ -1,5 +1,5 @@
-printItem [] = return ()
-printItem (x:xs) = putStrLn x >> printItem xs
+printItem [] = return () -- match an empty list
+printItem (x:xs) = putStrLn x >> printItem xs -- match a list with at least two elements
 
 fizzBuzz :: Int -> String
 fizzBuzz n | n `mod` 15 == 0  = "FizzBuzz"
